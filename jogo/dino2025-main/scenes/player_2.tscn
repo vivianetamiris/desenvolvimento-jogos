@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc330hep7ge36"]
+
+[ext_resource type="Texture2D" uid="uid://k5juff8tbofy" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="1_l6tho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s551d"]
+size = Vector2(48.5, 50)
+
+[node name="player2" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(17, 18.5)
+scale = Vector2(3.125, 3.3125)
+texture = ExtResource("1_l6tho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.75, 19)
+shape = SubResource("RectangleShape2D_s551d")
