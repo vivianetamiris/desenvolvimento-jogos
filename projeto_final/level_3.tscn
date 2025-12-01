@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://job1gjokx51f"]
+
+[ext_resource type="Texture2D" uid="uid://d2k82eqhfnrhc" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="1_16pka"]
+[ext_resource type="Texture2D" uid="uid://b7pbrjr14ks8g" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="2_j8bo8"]
+[ext_resource type="Texture2D" uid="uid://ovy0ngjhobwi" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="3_1jdk1"]
+
+[node name="level3" type="Node2D"]
+
+[node name="fundolvl3" type="Node2D" parent="."]
+
+[node name="3" type="Parallax2D" parent="fundolvl3"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl3/3"]
+texture = ExtResource("1_16pka")
+centered = false
+
+[node name="2" type="Parallax2D" parent="fundolvl3"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl3/2"]
+texture = ExtResource("2_j8bo8")
+centered = false
+
+[node name="1" type="Parallax2D" parent="fundolvl3"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl3/1"]
+texture = ExtResource("3_1jdk1")
+centered = false

@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1dfll72802wi"]
+
+[ext_resource type="Texture2D" uid="uid://c4yx3r426tx3b" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="1_7dov7"]
+[ext_resource type="PackedScene" uid="uid://d2s7oar1epfas" path="res://player.tscn" id="1_jg0dc"]
+[ext_resource type="Texture2D" uid="uid://cojq2ai4b81ix" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="2_ehv2h"]
+[ext_resource type="Texture2D" uid="uid://dsihh6blcb3hx" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="3_15wb7"]
+[ext_resource type="Texture2D" uid="uid://ojq6n7s68jcd" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="4_eoq84"]
+[ext_resource type="Texture2D" uid="uid://dn2cubtwsayt8" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="5_yl73a"]
+[ext_resource type="Texture2D" uid="uid://bw8x3817kpbuo" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="6_xbcdb"]
+
+[node name="level2" type="Node2D"]
+
+[node name="fundolvl2" type="Node2D" parent="."]
+scale = Vector2(4, 4)
+
+[node name="6" type="Parallax2D" parent="fundolvl2"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl2/6"]
+texture = ExtResource("1_7dov7")
+centered = false
+
+[node name="5" type="Parallax2D" parent="fundolvl2"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl2/5"]
+texture = ExtResource("2_ehv2h")
+centered = false
+
+[node name="4" type="Parallax2D" parent="fundolvl2"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl2/4"]
+texture = ExtResource("3_15wb7")
+centered = false
+
+[node name="3" type="Parallax2D" parent="fundolvl2"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl2/3"]
+texture = ExtResource("4_eoq84")
+centered = false
+
+[node name="2" type="Parallax2D" parent="fundolvl2"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl2/2"]
+texture = ExtResource("5_yl73a")
+centered = false
+
+[node name="1" type="Parallax2D" parent="fundolvl2"]
+repeat_size = Vector2(288, 0)
+repeat_times = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="fundolvl2/1"]
+texture = ExtResource("6_xbcdb")
+centered = false
+
+[node name="player" parent="." instance=ExtResource("1_jg0dc")]
+position = Vector2(99, 485)

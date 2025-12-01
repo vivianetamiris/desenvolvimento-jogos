@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://binfxlf2eoq51"]
+
+[ext_resource type="Script" uid="uid://bx2onshu55mu4" path="res://scripts/inimigo.gd" id="1_1f7fc"]
+[ext_resource type="Texture2D" uid="uid://delfe5dmpssrk" path="res://assets/Sprite Pack 8/4 - Percy/Running (32 x 32).png" id="1_c2svc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f7fc"]
+atlas = ExtResource("1_c2svc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13p1h"]
+atlas = ExtResource("1_c2svc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k0de"]
+atlas = ExtResource("1_c2svc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjnvv"]
+atlas = ExtResource("1_c2svc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlwpg"]
+atlas = ExtResource("1_c2svc")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grf3x"]
+atlas = ExtResource("1_c2svc")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_134kb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f7fc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13p1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k0de")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjnvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlwpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grf3x")
+}],
+"loop": true,
+"name": &"andando",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bvvyx"]
+radius = 8.0
+height = 18.0
+
+[node name="inimigo" type="CharacterBody2D"]
+script = ExtResource("1_1f7fc")
+metadata/_edit_group_ = true
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_134kb")
+animation = &"andando"
+frame_progress = 0.83417
+
+[node name="colisao" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_bvvyx")
